@@ -1,0 +1,22 @@
+<!-- <label>
+  <div>
+    <input 
+    type='{{type}}' 
+    value='{{value}}'
+    name='{{name}}'>
+    <span>{{value}}</span>
+  </div>
+</label> -->
+
+<!-- <label class="switch" >
+  <input type="checkbox" >
+  <span class="slider round" data-off="Off"></span>
+</label> -->
+
+
+
+<label class="switch" [ngClass]="{ 'checked': value }" [attr.title]="label">
+	<input (change)="switch()" [type]="type" [name]="name" class="switch-input" [value]="value" [attr.checked]="value" [attr.aria-label]="label" [disabled]="disable">
+	<span class="switch-label" data-on="on" data-off="off"></span> 
+	<span class="switch-handle"></span>
+</label>

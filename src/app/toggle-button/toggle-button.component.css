@@ -1,0 +1,82 @@
+/* .switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 24px;
+  padding: 4px;
+  background-color: none;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  text-transform: uppercase;
+  background: #ccc;
+  border-radius: 12px;
+  transition: 0.15s ease-out;
+  transition-property: opacity background;
+}
+
+.switch-label::before, .switch-label::after {
+  font-family: 'Lato';
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 18px;
+  position: absolute;
+  top: 50%;
+  margin-top: -.6em;
+  transition: inherit;
+}
+
+.switch-label::before {
+  content: attr(data-off);
+  right: 3px;
+}
+
+.switch-label::after {
+  content: attr(data-on);
+  left: 5px;
+  opacity: 0;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 1px 1px 5px #2d2d2d;
+  transition: left 0.15s ease-out;
+}
+
+.checked .switch-label {
+  background: rgba(88, 129, 44, 1);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), inset 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.checked .switch-label::before {
+  opacity: 0;
+}
+
+.checked .switch-label::after {
+  opacity: 1;
+}
+
+.checked .switch-handle {
+  left: 33px;
+  box-shadow: -1px 1px 5px rgba(45, 45, 45, 0.41);
+} */

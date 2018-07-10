@@ -1,0 +1,11 @@
+<form [formGroup]='form' (ngSubmit)="submit()">
+    <!-- <app-toggle-button type="radio" name="gender" formControlName="gender" ></app-toggle-button>
+
+    <app-toggle-button (change)="onChange()" type="radio" name="gender" formControlName="gender" ></app-toggle-button> -->
+
+    <app-toggle-button (change)="onChange($event)" [type]="'radio'" formControlName="gender" [label]="'naranja'" [name]="'some'" value="naranja"></app-toggle-button>
+    <app-toggle-button [type]="'radio'" formControlName="gender" [label]="'banana'" [name]="'some'" value="banana"></app-toggle-button>
+
+
+    <button>Submit</button>
+</form>
