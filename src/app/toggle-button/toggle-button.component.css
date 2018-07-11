@@ -1,4 +1,4 @@
-/* .switch {
+.switch {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -79,4 +79,4 @@
 .checked .switch-handle {
   left: 33px;
   box-shadow: -1px 1px 5px rgba(45, 45, 45, 0.41);
-} */
+}

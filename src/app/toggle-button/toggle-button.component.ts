@@ -16,37 +16,32 @@ const customValueProvider = {
 export class ToggleButtonComponent implements ControlValueAccessor {
 
   propagateChange:any = () => {};
+  isChecked: boolean
   
+  @Input() on: string;
+  @Input() off: string;
+
   @Input() type: string;
   @Input() name: string;
+  @Input() status: string;
   @Input() label = 'switch';
   @Input('value') _value = false;
-  @Input('disable') _disable = false;
   onChange: any = () => { };
   onTouched: any = () => { };
-  
-  get disable() {
-    return this._disable;
-  }
-  
-  set disable(disable) {
-    if (disable) {
-      this._disable = disable;
-    }
-  }
-  
+
+
   get value() {
     return this._value;
   }
   
   set value(val) {
     this._value = val;
-    // console.log( '  SET  _value:', this._value);
     this.onChange(val);
     this.onTouched();
   }
   
   constructor() {
+    this.isChecked = false
    }
 
   registerOnChange(fn) {
@@ -54,9 +49,12 @@ export class ToggleButtonComponent implements ControlValueAccessor {
   }
 
   writeValue(value) {
-    console.log('value:', this.value, '    _value:', this._value);
+    console.log("writeValue: ",value)
+    this.value = value;
     if (value) {
-      this.value = value;
+      this.isChecked=true
+    }else{
+      this.isChecked=null
     }
   }
 
@@ -65,9 +63,10 @@ export class ToggleButtonComponent implements ControlValueAccessor {
   }
 
   switch() {
-    console.log("switch in toggle button")
+    // console.log("switch in toggle button")
     this.value = !this.value;
-    // this.onChange("cambie");
+    // console.log("switch: ",this.value)
+    // this.onChange();
   }
 
 

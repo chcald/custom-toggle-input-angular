@@ -11,19 +11,25 @@ export class ToggleFormComponent implements OnInit {
   form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      gender: ['naranja', Validators.required]
+      gender: true,
+      gender1: [{value:true, disabled:true}, Validators.required],
+      submiter: {value:false, disabled:true}
     });
   }
 
 
   ngOnInit() {
+
+    // console.log(this.form.controls.submiter.disable())
     this.form.controls.gender.valueChanges.subscribe(() => {
     });
   }
 
   onChange(event){
-
-    console.log(this.form.value)
+    console.log("onChange")
+    // console.log(event)
+    // // console.log(this.form.controls.gender.disable())
+    // console.log(this.form)
   }
 
 }

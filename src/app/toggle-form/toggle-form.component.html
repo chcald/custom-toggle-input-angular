@@ -3,9 +3,11 @@
 
     <app-toggle-button (change)="onChange()" type="radio" name="gender" formControlName="gender" ></app-toggle-button> -->
 
-    <app-toggle-button (change)="onChange($event)" [type]="'radio'" formControlName="gender" [label]="'naranja'" [name]="'some'" value="naranja"></app-toggle-button>
-    <app-toggle-button [type]="'radio'" formControlName="gender" [label]="'banana'" [name]="'some'" value="banana"></app-toggle-button>
+    <app-toggle-button (change)="onChange($event)"  formControlName="gender" [label]="'naranja'" [name]="'some'" on="si" off="no"></app-toggle-button>
+    <app-toggle-button  formControlName="gender1" [label]="'banana'" [name]="'some'" on="si" off="no"></app-toggle-button>
 
 
     <button>Submit</button>
+
+
 </form>
