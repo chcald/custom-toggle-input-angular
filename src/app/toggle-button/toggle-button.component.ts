@@ -17,6 +17,7 @@ export class ToggleButtonComponent implements ControlValueAccessor {
 
   propagateChange:any = () => {};
   isChecked: boolean
+  isDisabled: boolean
   
   @Input() on: string;
   @Input() off: string;
@@ -49,7 +50,7 @@ export class ToggleButtonComponent implements ControlValueAccessor {
   }
 
   writeValue(value) {
-    console.log("writeValue: ",value)
+    // console.log("writeValue: ",value)
     this.value = value;
     if (value) {
       this.isChecked=true
@@ -63,11 +64,12 @@ export class ToggleButtonComponent implements ControlValueAccessor {
   }
 
   switch() {
-    // console.log("switch in toggle button")
     this.value = !this.value;
-    // console.log("switch: ",this.value)
     // this.onChange();
   }
 
+  setDisabledState(isDisabled: boolean) {
+    this.isDisabled = isDisabled
+  }
 
 }

@@ -11,9 +11,8 @@ export class ToggleFormComponent implements OnInit {
   form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      gender: true,
-      gender1: [{value:true, disabled:true}, Validators.required],
-      submiter: {value:false, disabled:true}
+      gender: [{value:false, disabled:false}, Validators.requiredTrue],
+      gender1: [{value:true, disabled:false}, Validators.requiredTrue]
     });
   }
 
@@ -23,6 +22,14 @@ export class ToggleFormComponent implements OnInit {
     // console.log(this.form.controls.submiter.disable())
     this.form.controls.gender.valueChanges.subscribe(() => {
     });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      console.log('form submitted');
+    } else {
+      // validate all form fields
+    }
   }
 
   onChange(event){

@@ -1,22 +1,6 @@
-<!-- <label>
-  <div>
-    <input 
-    type='{{type}}' 
-    value='{{value}}'
-    name='{{name}}'>
-    <span>{{value}}</span>
-  </div>
-</label> -->
-
-<!-- <label class="switch" >
-  <input type="checkbox" >
-  <span class="slider round" data-off="Off"></span>
-</label> -->
-
-
 
 <label class="switch" [ngClass]="{ 'checked': value }" [attr.title]="label">
-	<input (change)="switch()" type="checkbox" [name]="name" class="switch-input" [value]="value" [attr.checked]="isChecked" [attr.aria-label]="label">
+	<input (change)="switch()" type="checkbox" [name]="name" class="switch-input" [value]="value" [attr.checked]="isChecked" [attr.disabled]="isDisabled" [attr.required]="required" [attr.aria-label]="label">
   <span class="switch-label" [attr.data-on]="on" [attr.data-off]="off"></span> 
   <!-- Example for internationalization i18n-data-on="@@on"  -->
 	<span class="switch-handle"></span>
