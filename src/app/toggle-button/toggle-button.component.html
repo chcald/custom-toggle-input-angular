@@ -1,7 +1,7 @@
 
-<label class="switch" [ngClass]="{ 'checked': value }" [attr.title]="label">
-	<input (change)="switch()" type="checkbox" [name]="name" class="switch-input" [value]="value" [attr.checked]="isChecked" [attr.disabled]="isDisabled" [attr.required]="required" [attr.aria-label]="label">
-  <span class="switch-label" [attr.data-on]="on" [attr.data-off]="off"></span> 
+<label class="toggle-button" [ngClass]="{ 'toggle-button--checked': value }" [attr.title]="label">
+	<input (change)="switch()" type="checkbox" [name]="name" class="toggle-button__input" [value]="value" [attr.checked]="isChecked" [attr.disabled]="isDisabled" [attr.required]="required" [attr.aria-label]="label">
+  <span class="toggle-button__label" [attr.data-on]="on" [attr.data-off]="off"></span> 
   <!-- Example for internationalization i18n-data-on="@@on"  -->
-	<span class="switch-handle"></span>
+	<span class="toggle-button__handle"></span>
 </label>

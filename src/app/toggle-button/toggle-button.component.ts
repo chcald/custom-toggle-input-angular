@@ -10,7 +10,7 @@ const customValueProvider = {
 @Component({
   selector: 'app-toggle-button',
   templateUrl: './toggle-button.component.html',
-  styleUrls: ['./toggle-button.component.css'],
+  styleUrls: ['./toggle-button.component.scss'],
   providers: [ customValueProvider ]
 })
 export class ToggleButtonComponent implements ControlValueAccessor {
